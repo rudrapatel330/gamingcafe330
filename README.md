@@ -1,7 +1,5 @@
 # 🎮 Ace Playz Gaming Store & Cafe
 
-![Ace Playz Logo](assets/ace_playz_logo.png)
-
 A highly-interactive, premium web storefront for a gaming cafe and game launcher platform. Designed with a sleek, dark-themed UI featuring fluid GSAP animations, glassmorphism aesthetics, and a robust mobile-first approach that feels like a native app.
 
 ## 🌟 Project Overview
