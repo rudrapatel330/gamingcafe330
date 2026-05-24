@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ace Playz | Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/games.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body class="store-body">
+    <!-- Navbar -->
+    <nav class="store-nav">
+        <div class="store-nav-brand">
+            <span class="neon-text">ACE</span> PLAYZ
+        </div>
+        <div class="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+        <div class="nav-menu-container">
+            <div class="store-nav-links">
+                <a href="index.html">Home</a>
+                <a href="games.html" class="active">Catalog</a>
+                <a href="booking.html">Bookseat</a>
+                <a href="about.html">About Us</a>
+            </div>
+            <div class="store-nav-user">
+                <div class="user-avatar"></div>
+                <span>Mr. Player</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Featured Hero -->
+    <header class="store-hero">
+        <div class="container store-hero-container">
+            <div class="hero-content">
+                <div class="rating-badge">
+                    <span class="score" id="hero-score">95</span>
+                    <div class="stars">★★★★★</div>
+                    <span class="rating-text">Game rating</span>
+                </div>
+                <h1 class="hero-title" id="hero-title">Black Myth: Wukong</h1>
+                <p class="hero-desc" id="hero-desc">
+                    Immerse yourself in Chinese mythology as the Destined One. Explore a vast and beautifully crafted world, face formidable foes, and uncover the truth beneath the veil of a glorious legend.
+                </p>
+                <div class="platforms" id="hero-platforms">
+                    <span>PLATFORMS:</span>
+                    <span class="plat-icon">PS5</span>
+                    <span class="plat-icon">PC</span>
+                </div>
+                <div class="genres" id="hero-genres">
+                    <span>GENRES:</span>
+                    <span class="genre-tag">Action</span>
+                    <span class="genre-tag">RPG</span>
+                    <span class="genre-tag">Adventure</span>
+                </div>
+                <div class="hero-action">
+                    <a href="booking.html" class="btn-buy" style="text-decoration: none; display: inline-block;">PLAY NOW</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img id="hero-img" src="assets/Black Myth wukong.png" alt="Hero Game">
+            </div>
+        </div>
+    </header>
+
+    <!-- Thumbnails Slideshow -->
+    <section class="thumbnails-section">
+        <div class="container slideshow-container">
+            <div class="slideshow-wrapper" id="slideshow-wrapper"></div>
+            <button class="slide-arrow slide-arrow-prev" id="slide-prev">&#10094;</button>
+            <button class="slide-arrow slide-arrow-next" id="slide-next">&#10095;</button>
+            <div class="slide-dots" id="slide-dots"></div>
+        </div>
+    </section>
+
+    <!-- Best Products & Newsletter -->
+    <section class="best-products">
+        <div class="container best-container">
+            <div class="best-product-card">
+                <h2 class="section-heading">Best <br><span>PRODUCTS</span></h2>
+                <div class="rating-badge small-rating">
+                    <span class="score">98</span>
+                    <div class="stars">★★★★★</div>
+                </div>
+                <h3>Grand Theft Auto V</h3>
+                <p class="product-desc">Experience the ultimate open-world adventure in Los Santos.</p>
+                <div class="platforms">
+                    <span class="plat-icon">PS5</span> <span class="plat-icon">PC</span>
+                </div>
+                <div class="hero-action">
+                    <a href="booking.html" class="btn-buy" style="text-decoration: none; display: inline-block;">PLAY NOW</a>
+                </div>
+                <div class="best-product-img">
+                    <img src="assets/gta5.avif" alt="GTA V">
+                </div>
+            </div>
+
+            <div class="newsletter-card">
+                <div class="newsletter-content">
+                    <h2>Newsletter</h2>
+                    <p>Subscribe to get the latest updates and offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your E-mail">
+                        <button type="submit">→</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Section -->
+    <section class="popular-section">
+        <div class="container">
+            <h2 class="section-heading">Popular <br><span>GAMES</span></h2>
+            <div class="popular-grid">
+                <!-- Card 1 -->
+                <div class="pop-card">
+                    <div class="pop-img"><img src="assets/nfcumbound.png" alt="NFS"></div>
+                    <div class="pop-info">
+                        <h3>Need For Speed Unbound</h3>
+                        <div class="pop-meta">
+                            <div><span class="label">Availability:</span><span class="value in-stock">Available</span></div>
+                            <div><span class="label">Product code:</span><span class="value">002101</span></div>
+                        </div>
+                        <div class="pop-bottom" style="justify-content: flex-end;">
+                            <a href="booking.html" class="btn-buy small" style="text-decoration: none;">PLAY NOW</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="pop-card">
+                    <div class="pop-img"><img src="assets/re9.png" alt="RE9"></div>
+                    <div class="pop-info">
+                        <h3>Resident Evil 9</h3>
+                        <div class="pop-meta">
+                            <div><span class="label">Availability:</span><span class="value in-stock">Available</span></div>
+                            <div><span class="label">Product code:</span><span class="value">007188</span></div>
+                        </div>
+                        <div class="pop-bottom" style="justify-content: flex-end;">
+                            <a href="booking.html" class="btn-buy small" style="text-decoration: none;">PLAY NOW</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="pop-card">
+                    <div class="pop-img"><img src="assets/FC26.png" alt="FC26"></div>
+                    <div class="pop-info">
+                        <h3>EA FC 26</h3>
+                        <div class="pop-meta">
+                            <div><span class="label">Availability:</span><span class="value in-stock">Available</span></div>
+                            <div><span class="label">Product code:</span><span class="value">001201</span></div>
+                        </div>
+                        <div class="pop-bottom" style="justify-content: flex-end;">
+                            <a href="booking.html" class="btn-buy small" style="text-decoration: none;">PLAY NOW</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="pop-card">
+                    <div class="pop-img"><img src="assets/GhostofYotie.png" alt="Ghost"></div>
+                    <div class="pop-info">
+                        <h3>Ghost of Yotei</h3>
+                        <div class="pop-meta">
+                            <div><span class="label">Availability:</span><span class="value out-stock">Unavailable</span></div>
+                            <div><span class="label">Product code:</span><span class="value">008212</span></div>
+                        </div>
+                        <div class="pop-bottom" style="justify-content: flex-end;">
+                            <a href="booking.html" class="btn-buy small disabled" style="text-decoration: none; pointer-events: none;">PLAY NOW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="store-footer">
+        <div class="container footer-container">
+            <div class="tweets-block">
+                <h2 class="section-heading">Tweets <br><span>LATEST</span></h2>
+                <div class="tweet-icon"></div>
+            </div>
+            <div class="footer-links-block">
+                <div class="footer-brand">
+                    <span class="neon-text">ACE</span> PLAYZ
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="#">Support</a>
+                    <a href="#">Affiliate</a>
+                    <a href="#">Sponsor</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/global.js"></script>
+    <script src="js/games.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>

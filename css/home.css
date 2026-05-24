@@ -1,0 +1,276 @@
+/* ============================================
+   HOME PAGE CSS (STORE THEME)
+   ============================================ */
+
+/* ===== HERO ===== */
+.home-hero-section {
+    width: 100%;
+    min-height: calc(100vh - 80px);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.hero-container-new {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 4vw;
+}
+
+.hero-left {
+    flex: 1;
+    position: relative;
+    padding-left: 2vw;
+}
+
+.light-swoosh-container {
+    position: relative;
+    display: inline-block;
+}
+
+.light-swoosh {
+    position: absolute;
+    top: -120px;
+    left: -160px;
+    width: 800px;
+    z-index: 0;
+    pointer-events: none;
+    /* Tint the blue light to neon green to match the theme */
+    filter: hue-rotate(-120deg) saturate(1.5) brightness(1.2);
+    opacity: 0.8;
+}
+
+.hero-text-content {
+    position: relative;
+    z-index: 1;
+    padding-left: 20px;
+}
+
+.hero-title-new {
+    font-family: var(--font-heading);
+    font-size: 6.5rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #fff;
+    margin-bottom: 5px;
+    line-height: 1.1;
+    word-break: break-word;
+    text-transform: uppercase;
+}
+
+@keyframes pulseGlow {
+    0% { text-shadow: 0 0 10px rgba(0, 229, 115, 0.3); }
+    50% { text-shadow: 0 0 30px rgba(0, 229, 115, 0.8), 0 0 10px rgba(0, 229, 115, 0.4); }
+    100% { text-shadow: 0 0 10px rgba(0, 229, 115, 0.3); }
+}
+
+.hero-title-new .neon-text {
+    display: inline-block;
+    animation: pulseGlow 3s infinite alternate;
+}
+
+.hero-subtitle {
+    font-family: var(--font-body);
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    margin-left: 5px;
+    letter-spacing: 1px;
+}
+
+.hero-right {
+    flex: 1;
+    position: relative;
+    height: 600px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 2vw;
+}
+
+.stacked-cards {
+    position: relative;
+    width: 600px;
+    height: 500px;
+}
+
+.game-card {
+    position: absolute;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: transform 0.3s ease, z-index 0.3s, border-color 0.3s;
+}
+
+.card-1 { top: 30px; right: 0; width: 260px; height: 260px; z-index: 1; }
+.card-2 { top: 180px; left: -30px; width: 250px; height: 250px; z-index: 2; transform: rotate(-8deg); }
+.card-3 { top: 160px; left: 140px; width: 250px; height: 250px; z-index: 3; }
+.card-4 { top: 250px; right: 50px; width: 270px; height: 270px; z-index: 4; }
+
+.game-card:hover {
+    transform: scale(1.08) translateY(-10px) !important;
+    z-index: 10 !important;
+    border-color: var(--neon-green, #00e573);
+    box-shadow: 0 15px 40px rgba(0, 229, 115, 0.4);
+}
+
+/* ===== HARDWARE BENTO GRID ===== */
+.hardware-section {
+    padding: 80px 0 120px;
+}
+
+.bento-grid {
+    display: flex;
+    gap: 30px;
+}
+
+.bento-card {
+    background: var(--bg-card);
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    transition: border-color 0.3s;
+    border: 1px solid transparent;
+}
+.bento-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--neon-green);
+}
+
+.large-card {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-img-wrap {
+    height: 300px;
+    overflow: hidden;
+}
+.card-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.card-text-content {
+    padding: 40px;
+}
+.tag {
+    display: inline-block;
+    padding: 6px 14px;
+    background: rgba(0, 229, 115, 0.1);
+    color: var(--neon-green);
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+.bento-card h3 {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.bento-card p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.bento-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.small-card {
+    flex: 1;
+}
+.dark-card {
+    background: linear-gradient(135deg, var(--bg-card), #0a0b0e);
+    border: 1px solid rgba(0, 229, 115, 0.2);
+}
+
+/* Responsive Home */
+@media (max-width: 1024px) {
+    .hero-container-new { flex-direction: column; text-align: center; padding-top: 40px; }
+    .hero-left { padding-left: 0; margin-bottom: 50px; width: 100%; }
+    .light-swoosh { display: none; } /* Hide large absolute image on mobile */
+    .hero-title-new { font-size: 4.5rem; }
+    .hero-right { width: 100%; height: auto; justify-content: center; padding: 0; }
+    .stacked-cards { width: 100%; max-width: 450px; height: 480px; margin: 0 auto; display: block; position: relative; }
+    .card-1 { width: 200px; height: 200px; top: 0px; right: 20px; left: auto; z-index: 1; }
+    .card-2 { width: 180px; height: 180px; top: 80px; left: 20px; transform: rotate(-8deg); z-index: 2; }
+    .card-3 { width: 190px; height: 190px; top: 140px; left: 100px; transform: none; z-index: 3; }
+    .card-4 { width: 220px; height: 220px; top: 250px; right: 30px; left: auto; transform: none; z-index: 4; }
+    .bento-grid { flex-direction: column; }
+    .large-card { min-height: 400px; }
+}
+@media (max-width: 768px) {
+    .hero-title-new { font-size: 3rem; white-space: normal; }
+    .hero-action { display: flex; flex-direction: column; align-items: center; gap: 15px; }
+    .hero-action a { margin-left: 0 !important; width: 100%; text-align: center; }
+    .stacked-cards { max-width: 340px; height: 400px; }
+    .card-1 { width: 160px; height: 160px; top: 0px; right: 10px; }
+    .card-2 { width: 150px; height: 150px; top: 60px; left: -10px; }
+    .card-3 { width: 170px; height: 170px; top: 120px; left: 50px; }
+    .card-4 { width: 180px; height: 180px; top: 220px; right: 10px; }
+}
+
+/* ===== DYNAMIC BUTTON EFFECTS ===== */
+.btn-buy {
+    position: relative;
+    overflow: hidden;
+    animation: buttonPulse 2s infinite;
+}
+
+@keyframes buttonPulse {
+    0% { box-shadow: 0 0 0 0 rgba(0, 229, 115, 0.4); }
+    70% { box-shadow: 0 0 0 15px rgba(0, 229, 115, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(0, 229, 115, 0); }
+}
+
+.btn-buy::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0) 100%);
+    transform: skewX(-25deg);
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    0% { left: -100%; }
+    20% { left: 200%; }
+    100% { left: 200%; }
+}
+
+/* ===== MOBILE MICRO-INTERACTIONS ===== */
+@media (hover: none) and (pointer: coarse) {
+    .btn-buy:active {
+        transform: scale(0.92) !important;
+        transition: transform 0.1s ease !important;
+    }
+    .bento-card:active {
+        transform: scale(0.97);
+        border-color: var(--neon-green);
+        transition: transform 0.1s ease, border-color 0.1s ease;
+    }
+    .game-card:active {
+        transform: scale(0.95) !important;
+        border-color: var(--neon-green);
+        transition: transform 0.1s ease, border-color 0.1s ease !important;
+    }
+}

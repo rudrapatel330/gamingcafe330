@@ -1,0 +1,275 @@
+/* ============================================
+   ACE PLAYZ — PREMIUM CYBER-GLASS THEME
+   Deep Mesh Gradients, Glassmorphism, 3D Depth
+   ============================================ */
+
+:root {
+    --bg-dark: #030407;
+    --glass-bg: rgba(20, 25, 40, 0.4);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-glow: rgba(0, 229, 255, 0.15);
+    
+    --neon-cyan: #00F0FF;
+    --neon-purple: #B026FF;
+    --neon-blue: #0044FF;
+    
+    --text-main: #ffffff;
+    --text-muted: #9ba1cc;
+
+    --font-heading: 'Orbitron', sans-serif;
+    --font-body: 'Space Grotesk', sans-serif;
+    --font-display: 'Orbitron', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+}
+
+/* Dynamic Animated Background Mesh - Removed for image hero */
+
+/* Custom Glow Cursor */
+.cursor-dot {
+    width: 6px; height: 6px; background: var(--neon-cyan);
+    border-radius: 50%; position: fixed; top: 0; left: 0;
+    transform: translate(-50%, -50%); pointer-events: none; z-index: 9999;
+    box-shadow: 0 0 10px var(--neon-cyan);
+}
+.cursor-ring {
+    width: 40px; height: 40px; border: 1px solid rgba(0, 240, 255, 0.5);
+    border-radius: 50%; position: fixed; top: 0; left: 0;
+    transform: translate(-50%, -50%); pointer-events: none; z-index: 9998;
+    transition: width 0.2s, height 0.2s, background 0.2s;
+}
+
+/* Container & Typography */
+.container { max-width: 1400px; margin: 0 auto; padding: 0 4vw; position: relative; z-index: 2; }
+h1, h2, h3 { font-family: var(--font-heading); font-weight: 700; }
+
+.gradient-text {
+    background: linear-gradient(135deg, var(--neon-cyan), var(--neon-purple));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+
+/* Clean Navbar */
+.navbar-clean {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 6vw;
+    z-index: 1000;
+}
+
+.nav-brand-clean {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.nav-links-clean {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links-clean a {
+    color: #fff;
+    text-decoration: none;
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+.nav-links-clean a:hover {
+    color: var(--neon-cyan);
+}
+
+/* Interactive Glowing Buttons */
+.btn-glass {
+    background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border);
+    padding: 12px 28px; border-radius: 8px; color: #fff; font-family: var(--font-heading);
+    font-weight: 600; text-transform: uppercase; letter-spacing: 1px;
+    position: relative; overflow: hidden; transition: all 0.3s ease; backdrop-filter: blur(10px);
+}
+.btn-glass::before {
+    content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 240, 255, 0.4), transparent);
+    transition: left 0.5s;
+}
+.btn-glass:hover {
+    border-color: var(--neon-cyan); box-shadow: 0 0 20px var(--glass-glow);
+    transform: translateY(-2px); background: rgba(0, 240, 255, 0.1);
+}
+.btn-glass:hover::before { left: 100%; }
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--neon-blue), var(--neon-purple));
+    border: none; padding: 16px 40px; border-radius: 8px; color: #fff;
+    font-family: var(--font-heading); font-weight: 700; font-size: 1.1rem; text-transform: uppercase;
+    letter-spacing: 2px; box-shadow: 0 10px 30px rgba(176, 38, 255, 0.3); transition: all 0.3s;
+}
+.btn-primary:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(176, 38, 255, 0.5);
+}
+
+/* Footer */
+.footer {
+    background: rgba(10, 15, 25, 0.6); backdrop-filter: blur(20px); border-top: 1px solid var(--glass-border); padding: 80px 0 40px;
+}
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px; margin-bottom: 60px; }
+.footer h4 { color: #fff; font-size: 1.1rem; margin-bottom: 20px; }
+.footer p, .footer li { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 12px; list-style: none; }
+/* Micro-interactions & Responsiveness */
+.reveal-hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.btn-buy, .btn-white {
+    transition: transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.2s ease;
+}
+.btn-buy:active, .btn-white:active {
+    transform: scale(0.95) !important;
+}
+
+.nav-menu-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    z-index: 1001;
+}
+.hamburger span {
+    width: 30px; height: 2px; background: #fff;
+    transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    .hamburger { display: flex; }
+    .store-nav { padding: 15px 20px; flex-direction: row; justify-content: space-between; }
+    
+    .nav-menu-container {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(12, 13, 17, 0.98);
+        flex-direction: column;
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+        border-bottom: 0px solid var(--neon-green);
+        align-items: center;
+        gap: 0;
+    }
+    .nav-menu-container.active {
+        max-height: 500px;
+        padding: 30px 20px;
+        border-bottom: 2px solid var(--neon-green);
+    }
+    
+    .store-nav-links { flex-direction: column; text-align: center; width: 100%; gap: 20px; }
+    .store-nav-user { justify-content: center; margin-top: 20px; width: 100%; }
+    
+    .hamburger.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+/* Scroll Progress Bar */
+#scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--neon-green, #00E573), var(--neon-cyan, #00F0FF));
+    transform-origin: left center;
+    transform: scaleX(0);
+    z-index: 99999;
+    pointer-events: none;
+}
+
+/* Ripple Effect */
+.ripple-effect {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: 0;
+}
+
+/* Card Glow */
+.bento-card, .pop-card, .diff-card, .availability-card {
+    position: relative;
+}
+
+.bento-card::before, .pop-card::before, .diff-card::before, .availability-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(circle at var(--glow-x, 50%) var(--glow-y, 50%), rgba(0, 229, 115, 0.04) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 0;
+    border-radius: inherit;
+}
+
+.bento-card:hover::before, .pop-card:hover::before, .diff-card:hover::before, .availability-card:hover::before {
+    opacity: 1;
+}
+
+/* Char reveal for text animations */
+.char-reveal {
+    display: inline-block;
+}
+
+/* Ensure buttons have relative positioning for ripple */
+.btn-buy, .btn-primary, .btn-glass, .btn-white {
+    position: relative;
+    overflow: hidden;
+}
+
+/* GSAP-friendly initial states */
+[data-parallax] {
+    will-change: transform;
+}
+}
