@@ -9,21 +9,15 @@ document.addEventListener('DOMContentLoaded', () => {
             rate: 100,
             stations: [
                 { id: 'PS5-01', avail: true }, { id: 'PS5-02', avail: true },
-                { id: 'PS5-03', avail: false }, { id: 'PS5-04', avail: true },
-                { id: 'PS5-05', avail: true }, { id: 'PS5-06', avail: false },
-                { id: 'PS5-07', avail: true }, { id: 'PS5-08', avail: true },
+                { id: 'PS5-03', avail: true }, { id: 'PS5-04', avail: true },
+                { id: 'PS5-05', avail: true }, { id: 'PS5-06', avail: true },
             ]
         },
         pc: {
             label: 'PC Zone',
             rate: 80,
             stations: [
-                { id: 'PC-01', avail: true }, { id: 'PC-02', avail: true },
-                { id: 'PC-03', avail: false }, { id: 'PC-04', avail: true },
-                { id: 'PC-05', avail: false }, { id: 'PC-06', avail: true },
-                { id: 'PC-07', avail: true }, { id: 'PC-08', avail: false },
-                { id: 'PC-09', avail: true }, { id: 'PC-10', avail: true },
-                { id: 'PC-11', avail: false }, { id: 'PC-12', avail: true },
+                { id: 'PC-01', avail: true },
             ]
         }
     };
